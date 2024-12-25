@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import DetailView, ListView
 from .models import Post
 
 
@@ -15,3 +15,7 @@ class PostListView(ListView):
     ordering = ['-date_posted']
     # template_name = 'blog/home.html' # if not <app>/<model>_<viewtype>.html
     # context_object_name = 'posts' # if it's not `object_list`
+
+
+class PostDetailView(DetailView):
+    model = Post

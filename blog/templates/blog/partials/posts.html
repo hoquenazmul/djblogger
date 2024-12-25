@@ -4,14 +4,15 @@
             <div class="card mb-4 h-100">
                 <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                 <div class="card-body">
-                    <div class="small text-muted">
+                    <div class="small text-muted mb-2">
+                        Posted on {{ object.date_posted|date:"F d, Y" }} by
                         <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#">
                             {{ object.author }}
-                        </a> on {{ object.date_posted }}
+                        </a>
                     </div>
                     <h2 class="card-title h4">{{ object.title }}</h2>
                     <p class="card-text">{{ object.content|slice:":120" }}...</p>
-                    <a class="btn btn-primary" href="#!">Read more →</a>
+                    <a class="btn btn-primary" href="{% url 'post_detail' object.id %}">Read more →</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block content %}
+    <article class="post-details">
+        <header class="mb-4">
+            <h1 class="fw-bolder mb-1">{{ page }} Page - Coming Soon</h1>
+        </header>
+        <figure class="mb-4">
+            <img class="img-fluid rounded" src="{% static '/blog/images/under-construction.jpg' %}" />
+        </figure>
+    </article>
+{% endblock content %}

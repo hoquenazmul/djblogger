@@ -3,13 +3,6 @@ from django.views.generic import DetailView, ListView
 from .models import Post
 
 
-def home(request):
-    context = {
-        'object_list': Post.objects.all()
-    }
-    return render(request, 'blog/post_list.html', context)
-
-
 class PostListView(ListView):
     model = Post
     ordering = ['-date_posted']
@@ -19,3 +12,18 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+    
+
+def about(request):
+    context = {
+        'page': 'About'
+    }
+    
+    return render(request, 'blog/coming_soon.html', context)
+
+def contact(request):
+    context = {
+        'page': 'Contact'
+    }
+    
+    return render(request, 'blog/coming_soon.html', context)

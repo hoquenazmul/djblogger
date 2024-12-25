@@ -7,14 +7,11 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>DJ Blogger</title>
-        <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{% static 'blog/images/favicon.ico' %}" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet" />
         <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" />
     </head>
     <body>
-        <!-- Responsive navbar-->
         {% include 'blog/partials/navbar.html' %} 
         
         {% block welcome %}{% endblock %}
@@ -39,7 +36,6 @@
         <!-- Footer-->
         {% include 'blog/partials/footer.html' %}
         
-        <!-- Bootstrap core JS-->
         <script src="{% static 'blog/js/bootstrap.bundle.min.js' %}"></script>
         <script src="{% static 'blog/js/main.js' %}"></script>
     </body>

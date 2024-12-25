@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django App</title>
-</head>
-<body>
-    <h2>Hello World from Templates</h2>
-</body>
-</html>
+{% extends "blog/base.html" %}
+
+{% block welcome %}
+    {% include 'blog/partials/welcome.html' %}
+{% endblock welcome %}
+
+{% block content %}
+    {% include 'blog/partials/feature.html' %}
+    {% include 'blog/partials/posts.html' %}
+    {% include 'blog/partials/pagination.html' %}
+{% endblock content %}

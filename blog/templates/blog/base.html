@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,34 +6,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Blog Home - Start Bootstrap Template</title>
+        <title>DJ Blogger</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{% static 'blog/images/favicon.ico' %}" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->
+        {% include 'blog/partials/navbar.html' %} 
         
+        {% block welcome %}{% endblock %}
+
         <!-- Page content-->
         <div class="container">
-            <div class="row">
+            <div class="row main">
                 <!-- Blog entries-->
                 <div class="col-lg-8">
                     <!-- Block Content -->
+                    {% block content %}{% endblock %}
                 </div>
 
                 <!-- Side widgets-->
                 <div class="col-lg-4">
                     <!-- Sidebar widget -->
-                    
+                    {% include 'blog/partials/sidebar.html' %} 
                 </div>
             </div>
         </div>
 
         <!-- Footer-->
+        {% include 'blog/partials/footer.html' %}
         
         <!-- Bootstrap core JS-->
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'blog/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'blog/js/main.js' %}"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@
 {% endblock welcome %}
 
 {% block content %}
-    {% include 'blog/partials/feature.html' %}
-    {% include 'blog/partials/posts.html' %}
+    {% comment %} {% include 'blog/partials/feature.html' %} {% endcomment %}
+    {% include 'blog/partials/posts.html' with object_list=object_list %}
     {% include 'blog/partials/pagination.html' %}
 {% endblock content %}

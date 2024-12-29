@@ -2,16 +2,16 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h2 class="display-4">Create an Account</h2>
+    <h2 class="display-4">Login your Account</h2>
     <div class="blog-form">
         <form method="POST">
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit" class="btn btn-lg btn-primary">Register</button>
+            <button type="submit" class="btn btn-lg btn-primary">Login</button>
         </form>
         
         <p class="text-muted mt-3">
-            Already have an account? <a href="{% url 'login' %}">Login here</a>.
+            Don't have an account? <a href="{% url 'register' %}">Register here</a>.
         </p>
     </div>
 {% endblock content %}

@@ -10,7 +10,7 @@
                             {{ object.author }}
                         </a>
                     </div>
-                    <h2 class="card-title h4">{{ object.title }}</h2>
+                    <h2 class="card-title h4"><a class="text-muted" href="{% url 'post_detail' object.id %}">{{ object.title }}</a></h2>
                     <p class="card-text">{{ object.content|slice:":120" }}...</p>
                     <a class="btn btn-primary" href="{% url 'post_detail' object.id %}">Read more →</a>
                 </div>

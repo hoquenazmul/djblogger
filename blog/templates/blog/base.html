@@ -21,6 +21,15 @@
             <div class="row main mt-4">
                 <!-- Blog entries-->
                 <div class="col-lg-8">
+                    <!-- Display Triggered Messages -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
                     <!-- Block Content -->
                     {% block content %}{% endblock %}
                 </div>

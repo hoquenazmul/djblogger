@@ -134,3 +134,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # AUTH Settings
 LOGIN_REDIRECT_URL = 'post_list'
+
+LOGIN_URL = 'login'

@@ -2,5 +2,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h2 class="display-4">{{ user.username }}</h2>
+    <div class="media">
+        <img class="mr-3 rounded-circle profile-pic" src="{{ user.profile.image.url }}" alt="Profile picture">
+        <div class="media-body">
+            <h5 class="mt-0">{{ user.username }}</h5>
+            <p class="text-muted">{{ user.email }}</p>
+        </div>
+    </div>
 {% endblock content %}

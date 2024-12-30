@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <div class="small text-muted mb-2">
                         Posted on {{ object.date_posted|date:"F d, Y" }} by
-                        <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="#">
+                        <a class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{% url 'user_posts' object.author.username %}">
                             {{ object.author }}
                         </a>
                     </div>

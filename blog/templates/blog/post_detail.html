@@ -12,6 +12,10 @@
             </div>
             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
             <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
+            <div class="mt-3">
+                <a class="btn btn-info" href="{% url 'post_update' object.id %}">Update</a>
+                <a class="btn btn-danger" href="{% url 'post_delete' object.id %}">Delete</a>
+            </div>
         </header>
         <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure>
         <section class="mb-5">

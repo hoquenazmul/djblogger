@@ -9,4 +9,14 @@
             <p class="text-muted">{{ user.email }}</p>
         </div>
     </div>
+
+    <h2 class="display-4">Update your Profile Info</h2>
+    <div class="blog-form">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
+            <button type="submit" class="btn btn-lg btn-primary">Update</button>
+        </form>
+    </div>
 {% endblock content %}

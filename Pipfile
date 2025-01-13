@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "~=5.0"
+mysqlclient = "~=2.0"
 python-dotenv = "~=1.0"
 pillow = "~=9.0"
 crispy-bootstrap5 = "==2024.10"

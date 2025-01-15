@@ -47,3 +47,7 @@ tests/
 # Ignore system-specific files
 .DS_Store
 Thumbs.db
+
+# Ignore git files
+.git
+.github

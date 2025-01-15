@@ -2,9 +2,6 @@ FROM python:3.11.9
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED=1
-ENV MYSQL_USER=root
-ENV MYSQL_DATABASE=djblogger
-ENV MYSQL_ROOT_PASSWORD=@SecretPassword@
 WORKDIR /app
 
 # Required to install mysqlclient with Pip
@@ -21,8 +18,14 @@ COPY Pipfile Pipfile.lock /app/
 # and not into a virtualenv. Docker containers don't need virtual environments. 
 RUN pipenv install --system --dev
 
-# Copy the application files into the image
-COPY . /app/
+# Add a non-root user for security
+RUN useradd -m appuser
+
+# Switch to the non-root user for security
+USER appuser
+
+# Copy the application code
+COPY --chown=appuser:appuser . /app/
 
 # Expose port 8000 on the container
 EXPOSE 8000

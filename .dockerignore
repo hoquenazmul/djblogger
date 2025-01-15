@@ -1,0 +1,49 @@
+# Ignore Python cache files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Ignore Django migrations
+# */migrations/*
+
+# Ignore database files
+*.sqlite3
+
+# Ignore virtual environments
+venv/
+.env/
+.Python
+
+# Ignore Docker files
+Dockerfile*
+.dockerignore
+docker-compose.yml
+
+# Ignore logs and temp files
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Ignore static files generated during local development
+# static/
+# media/
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.sw?
+
+# Ignore test and coverage directories
+tests/
+*.cover
+*.tox
+*.nox
+*.coverage
+.coverage.*
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db

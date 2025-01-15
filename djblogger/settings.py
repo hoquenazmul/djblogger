@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'djblogger.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djblogger',
-        'HOST': 'localhost',
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASS'),
+        'NAME': os.getenv('MYSQL_DATABASE'),
+        'HOST': 'mysql',
+        'USER': os.getenv('MYSQL_USER'),
+        'PASSWORD': os.getenv('MYSQL_ROOT_PASSWORD'),
     },
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',

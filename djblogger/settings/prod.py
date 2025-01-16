@@ -1,5 +1,5 @@
 import os
-from .common import *
+from .common import *  # noqa: F403
 
 
 DEBUG = os.getenv('DEBUG')

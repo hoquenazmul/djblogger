@@ -1,7 +1,11 @@
+import logging
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from .forms import UserRegistrationForm, UserUpdateForm, ProfileUpdateForm
+
+
+logger = logging.getLogger(__name__)
 
 
 def register(request):
@@ -11,6 +15,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
+            logger.info(f'User# {username} is registered!')
             messages.success(request, f'Your account# {username} has been created!')
             return redirect('login')
     else:

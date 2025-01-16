@@ -6,6 +6,7 @@ DEBUG = os.getenv('DEBUG')
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
+# TODO: Needs to be updated with prod domain/url
 ALLOWED_HOSTS = ['*']
 
 DATABASES = {
